@@ -44,31 +44,18 @@ The 3D hand mesh rendering requires the MANO hand model (v1.2):
 
 ### Installation
 
-**Linux / macOS:**
 ```bash
 bash setup.sh
-```
-
-**Windows (PowerShell):**
-```powershell
-.\setup.ps1
 ```
 
 This will:
 1. Create the conda environment
 2. Install Python and Node.js dependencies
-3. Download MANO hand models and static resources
 
 ### Run
 
-**Linux / macOS:**
 ```bash
 bash start.sh
-```
-
-**Windows (PowerShell):**
-```powershell
-.\start.ps1
 ```
 
 Then open http://localhost:3000.
@@ -81,7 +68,7 @@ Then open http://localhost:3000.
 Terminal 1 (Flask backend):
 ```bash
 cd web
-conda activate tipianotation
+conda activate piannotate
 python server.py
 ```
 
@@ -140,7 +127,7 @@ PiAnnotate/
 ├── src/                          # Preprocessing scripts
 ├── data/                         # Created at runtime by the tool
 ├── for_elise/                    # FurElise dataset (not included, download separately)
-├── setup.sh / setup.ps1          # Installation scripts
+├── setup.sh                      # Installation script
 ├── start.sh                      # Launch script
 └── train.sh                      # Model training script
 ```
