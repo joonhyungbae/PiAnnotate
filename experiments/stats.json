@@ -1,0 +1,30 @@
+{
+  "pieces": {
+    "rule": 153,
+    "edited": 153,
+    "ai_v1": 77,
+    "ai_v2": 150,
+    "status_files": 153
+  },
+  "review_completion": {
+    "r1": 153,
+    "r2": 62,
+    "r3": 91
+  },
+  "notes": {
+    "rule_total": 5089395,
+    "edited_total": 5301309
+  },
+  "rule_vs_edited_on_r1": {
+    "compared_notes": 5301307,
+    "matched": 4867897,
+    "agreement": 0.9182446894699741,
+    "human_correction_rate": 0.08175531053002594
+  },
+  "ai_vs_edited_on_r1": {
+    "ai_dir": "data/fingering_edited_ai_v2",
+    "compared_notes": 5134729,
+    "matched": 4770096,
+    "agreement": 0.9289869046642968
+  }
+}

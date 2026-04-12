@@ -1,0 +1,19 @@
+{
+  "pieces_with_disagreement": 153,
+  "disagreement_rate_distribution": {
+    "min": 0.003177275689767556,
+    "p25": 0.049237412076049814,
+    "median": 0.07425219321424792,
+    "p75": 0.10635035682426408,
+    "max": 0.28385113806280116,
+    "mean": 0.08292343353626494,
+    "stdev": 0.04671808763185014
+  },
+  "multi_pass_coverage": {
+    "r1_only": 1,
+    "r1_r2": 61,
+    "r1_r3": 90,
+    "r1_r2_r3": 1
+  },
+  "pieces_with_at_least_two_passes": 152
+}

@@ -1,0 +1,2 @@
+export { FingeringCompare } from './FingeringCompare';
+

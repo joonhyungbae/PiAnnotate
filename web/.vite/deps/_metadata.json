@@ -1,0 +1,21 @@
+{
+  "hash": "df1d1e27",
+  "configHash": "277bf910",
+  "lockfileHash": "e3b0c442",
+  "browserHash": "4ae9c752",
+  "optimized": {
+    "three/addons/libs/lil-gui.module.min.js": {
+      "src": "../../web/node_modules/three/examples/jsm/libs/lil-gui.module.min.js",
+      "file": "three_addons_libs_lil-gui__module__min__js.js",
+      "fileHash": "07d348b9",
+      "needsInterop": false
+    },
+    "three/addons/loaders/RGBELoader.js": {
+      "src": "../../web/node_modules/three/examples/jsm/loaders/RGBELoader.js",
+      "file": "three_addons_loaders_RGBELoader__js.js",
+      "fileHash": "574aa38e",
+      "needsInterop": false
+    }
+  },
+  "chunks": {}
+}

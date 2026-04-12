@@ -1,0 +1,378 @@
+{
+  "ai_dir": "/root/PiAnnotate/data/fingering_edited_ai_holdout_seed2",
+  "split": "r2",
+  "pieces": [
+    {
+      "piece": 0,
+      "n_notes": 58427,
+      "rule_correct": 54538,
+      "probe_correct": 54793
+    },
+    {
+      "piece": 1,
+      "n_notes": 32968,
+      "rule_correct": 31028,
+      "probe_correct": 31049
+    },
+    {
+      "piece": 2,
+      "n_notes": 46588,
+      "rule_correct": 41051,
+      "probe_correct": 41205
+    },
+    {
+      "piece": 3,
+      "n_notes": 26175,
+      "rule_correct": 24129,
+      "probe_correct": 24141
+    },
+    {
+      "piece": 4,
+      "n_notes": 56400,
+      "rule_correct": 50613,
+      "probe_correct": 52012
+    },
+    {
+      "piece": 5,
+      "n_notes": 46479,
+      "rule_correct": 41768,
+      "probe_correct": 43005
+    },
+    {
+      "piece": 6,
+      "n_notes": 57195,
+      "rule_correct": 50803,
+      "probe_correct": 53021
+    },
+    {
+      "piece": 7,
+      "n_notes": 18752,
+      "rule_correct": 18068,
+      "probe_correct": 18251
+    },
+    {
+      "piece": 8,
+      "n_notes": 32259,
+      "rule_correct": 27366,
+      "probe_correct": 30322
+    },
+    {
+      "piece": 12,
+      "n_notes": 19911,
+      "rule_correct": 18440,
+      "probe_correct": 18799
+    },
+    {
+      "piece": 15,
+      "n_notes": 63065,
+      "rule_correct": 58380,
+      "probe_correct": 58615
+    },
+    {
+      "piece": 16,
+      "n_notes": 61511,
+      "rule_correct": 58447,
+      "probe_correct": 59717
+    },
+    {
+      "piece": 17,
+      "n_notes": 79710,
+      "rule_correct": 73290,
+      "probe_correct": 75288
+    },
+    {
+      "piece": 18,
+      "n_notes": 51802,
+      "rule_correct": 49410,
+      "probe_correct": 49900
+    },
+    {
+      "piece": 20,
+      "n_notes": 41410,
+      "rule_correct": 39188,
+      "probe_correct": 39257
+    },
+    {
+      "piece": 21,
+      "n_notes": 96911,
+      "rule_correct": 90863,
+      "probe_correct": 92744
+    },
+    {
+      "piece": 24,
+      "n_notes": 11441,
+      "rule_correct": 10387,
+      "probe_correct": 11047
+    },
+    {
+      "piece": 29,
+      "n_notes": 50297,
+      "rule_correct": 45549,
+      "probe_correct": 47742
+    },
+    {
+      "piece": 32,
+      "n_notes": 42141,
+      "rule_correct": 36255,
+      "probe_correct": 37246
+    },
+    {
+      "piece": 33,
+      "n_notes": 41206,
+      "rule_correct": 36536,
+      "probe_correct": 38347
+    },
+    {
+      "piece": 35,
+      "n_notes": 36114,
+      "rule_correct": 25863,
+      "probe_correct": 32436
+    },
+    {
+      "piece": 36,
+      "n_notes": 74359,
+      "rule_correct": 70021,
+      "probe_correct": 71245
+    },
+    {
+      "piece": 38,
+      "n_notes": 10783,
+      "rule_correct": 9692,
+      "probe_correct": 9932
+    },
+    {
+      "piece": 39,
+      "n_notes": 17361,
+      "rule_correct": 15979,
+      "probe_correct": 16000
+    },
+    {
+      "piece": 43,
+      "n_notes": 40006,
+      "rule_correct": 36324,
+      "probe_correct": 36885
+    },
+    {
+      "piece": 49,
+      "n_notes": 19725,
+      "rule_correct": 17074,
+      "probe_correct": 19025
+    },
+    {
+      "piece": 51,
+      "n_notes": 3478,
+      "rule_correct": 3356,
+      "probe_correct": 3473
+    },
+    {
+      "piece": 62,
+      "n_notes": 8371,
+      "rule_correct": 6774,
+      "probe_correct": 7680
+    },
+    {
+      "piece": 64,
+      "n_notes": 30961,
+      "rule_correct": 26613,
+      "probe_correct": 29155
+    },
+    {
+      "piece": 67,
+      "n_notes": 23188,
+      "rule_correct": 19822,
+      "probe_correct": 20590
+    },
+    {
+      "piece": 71,
+      "n_notes": 69628,
+      "rule_correct": 65216,
+      "probe_correct": 66193
+    },
+    {
+      "piece": 72,
+      "n_notes": 65862,
+      "rule_correct": 59592,
+      "probe_correct": 60033
+    },
+    {
+      "piece": 73,
+      "n_notes": 72293,
+      "rule_correct": 67687,
+      "probe_correct": 68724
+    },
+    {
+      "piece": 74,
+      "n_notes": 63683,
+      "rule_correct": 57102,
+      "probe_correct": 59655
+    },
+    {
+      "piece": 77,
+      "n_notes": 20538,
+      "rule_correct": 19035,
+      "probe_correct": 19177
+    },
+    {
+      "piece": 78,
+      "n_notes": 21365,
+      "rule_correct": 18045,
+      "probe_correct": 18842
+    },
+    {
+      "piece": 83,
+      "n_notes": 34930,
+      "rule_correct": 32088,
+      "probe_correct": 33191
+    },
+    {
+      "piece": 87,
+      "n_notes": 23843,
+      "rule_correct": 20507,
+      "probe_correct": 20180
+    },
+    {
+      "piece": 89,
+      "n_notes": 37921,
+      "rule_correct": 35144,
+      "probe_correct": 35171
+    },
+    {
+      "piece": 92,
+      "n_notes": 8927,
+      "rule_correct": 8269,
+      "probe_correct": 8619
+    },
+    {
+      "piece": 95,
+      "n_notes": 53605,
+      "rule_correct": 41919,
+      "probe_correct": 45584
+    },
+    {
+      "piece": 96,
+      "n_notes": 61841,
+      "rule_correct": 59568,
+      "probe_correct": 60207
+    },
+    {
+      "piece": 97,
+      "n_notes": 34533,
+      "rule_correct": 33670,
+      "probe_correct": 33992
+    },
+    {
+      "piece": 98,
+      "n_notes": 67441,
+      "rule_correct": 63896,
+      "probe_correct": 64734
+    },
+    {
+      "piece": 99,
+      "n_notes": 59399,
+      "rule_correct": 57793,
+      "probe_correct": 58104
+    },
+    {
+      "piece": 100,
+      "n_notes": 45713,
+      "rule_correct": 43678,
+      "probe_correct": 44353
+    },
+    {
+      "piece": 101,
+      "n_notes": 43909,
+      "rule_correct": 40023,
+      "probe_correct": 41731
+    },
+    {
+      "piece": 102,
+      "n_notes": 76594,
+      "rule_correct": 71711,
+      "probe_correct": 71822
+    },
+    {
+      "piece": 103,
+      "n_notes": 14207,
+      "rule_correct": 13193,
+      "probe_correct": 13213
+    },
+    {
+      "piece": 105,
+      "n_notes": 53813,
+      "rule_correct": 49966,
+      "probe_correct": 50286
+    },
+    {
+      "piece": 108,
+      "n_notes": 43177,
+      "rule_correct": 41596,
+      "probe_correct": 42231
+    },
+    {
+      "piece": 112,
+      "n_notes": 7619,
+      "rule_correct": 6819,
+      "probe_correct": 6828
+    },
+    {
+      "piece": 117,
+      "n_notes": 3552,
+      "rule_correct": 3333,
+      "probe_correct": 3487
+    },
+    {
+      "piece": 127,
+      "n_notes": 18415,
+      "rule_correct": 17740,
+      "probe_correct": 17975
+    },
+    {
+      "piece": 128,
+      "n_notes": 29726,
+      "rule_correct": 28354,
+      "probe_correct": 28344
+    },
+    {
+      "piece": 130,
+      "n_notes": 26090,
+      "rule_correct": 23229,
+      "probe_correct": 24100
+    },
+    {
+      "piece": 135,
+      "n_notes": 15248,
+      "rule_correct": 14009,
+      "probe_correct": 14118
+    },
+    {
+      "piece": 136,
+      "n_notes": 104995,
+      "rule_correct": 91789,
+      "probe_correct": 92693
+    },
+    {
+      "piece": 141,
+      "n_notes": 13526,
+      "rule_correct": 12964,
+      "probe_correct": 13180
+    },
+    {
+      "piece": 143,
+      "n_notes": 25330,
+      "rule_correct": 23439,
+      "probe_correct": 24279
+    },
+    {
+      "piece": 145,
+      "n_notes": 62981,
+      "rule_correct": 57292,
+      "probe_correct": 59062
+    },
+    {
+      "piece": 151,
+      "n_notes": 33665,
+      "rule_correct": 30717,
+      "probe_correct": 32260
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "split": "r2",
+  "pieces_evaluated": 62,
+  "summary": {
+    "n_notes": 2513363,
+    "rule_agreement": 0.9139189205856854,
+    "ai_agreement": 0.926764259679163,
+    "absolute_delta": 0.012845339093477626,
+    "r2_reversal_decomposition": {
+      "on_rule_wrong_notes": {
+        "total": 216353,
+        "fixed": 73995,
+        "kept_wrong": 119041,
+        "other_wrong": 12056,
+        "no_ai": 11261,
+        "fix_rate": 0.34201051060073123
+      },
+      "on_rule_right_notes": {
+        "total": 2297010,
+        "kept_right": 2255300,
+        "broken": 4484,
+        "no_ai": 37226,
+        "break_rate": 0.0019521029512279005
+      }
+    },
+    "triage": {
+      "flagged_notes": 98219,
+      "unflagged_notes": 2366657,
+      "review_load_reduction": 0.9601525593985255,
+      "flagged_precision": 0.8763172095012167,
+      "rule_error_recall": 0.4196701967897334,
+      "missed_errors": 119021,
+      "caught_errors": 86071
+    },
+    "missing_fill_vs_overwrite": {
+      "rule_had_entry": {
+        "notes": 2418067,
+        "ai_accuracy": 0.9329584333271163
+      },
+      "rule_no_entry_filled_by_model": {
+        "notes": 95296,
+        "ai_accuracy": 0.7695915883143049
+      }
+    },
+    "threshold_sweep": [
+      {
+        "tau": 0.1,
+        "tp": 205092,
+        "fp": 2259784,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.08320580832463784,
+        "recall": 1.0,
+        "f1": 0.1536288075362701,
+        "flagged_fraction": 1.0
+      },
+      {
+        "tau": 0.2,
+        "tp": 205092,
+        "fp": 2259784,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.08320580832463784,
+        "recall": 1.0,
+        "f1": 0.1536288075362701,
+        "flagged_fraction": 1.0
+      },
+      {
+        "tau": 0.3,
+        "tp": 205092,
+        "fp": 2259784,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.08320580832463784,
+        "recall": 1.0,
+        "f1": 0.1536288075362701,
+        "flagged_fraction": 1.0
+      },
+      {
+        "tau": 0.4,
+        "tp": 205092,
+        "fp": 2259780,
+        "fn": 0,
+        "tn": 4,
+        "precision": 0.08320594335121662,
+        "recall": 1.0,
+        "f1": 0.15362903769489028,
+        "flagged_fraction": 0.9999983772003135
+      },
+      {
+        "tau": 0.5,
+        "tp": 205092,
+        "fp": 2259634,
+        "fn": 0,
+        "tn": 150,
+        "precision": 0.08321087212128245,
+        "recall": 1.0,
+        "f1": 0.15363743895651313,
+        "flagged_fraction": 0.9999391450117572
+      },
+      {
+        "tau": 0.6,
+        "tp": 205092,
+        "fp": 2258727,
+        "fn": 0,
+        "tn": 1057,
+        "precision": 0.08324150434751904,
+        "recall": 1.0,
+        "f1": 0.1536896509475213,
+        "flagged_fraction": 0.999571175182849
+      },
+      {
+        "tau": 0.7,
+        "tp": 204951,
+        "fp": 2253934,
+        "fn": 141,
+        "tn": 5850,
+        "precision": 0.08335119373211843,
+        "recall": 0.9993125036568954,
+        "f1": 0.15386844556090387,
+        "flagged_fraction": 0.9975694517695819
+      },
+      {
+        "tau": 0.8,
+        "tp": 204210,
+        "fp": 2233530,
+        "fn": 882,
+        "tn": 26254,
+        "precision": 0.08377021339437347,
+        "recall": 0.9956994909601544,
+        "f1": 0.15453876750395032,
+        "flagged_fraction": 0.9889909269269529
+      },
+      {
+        "tau": 0.9,
+        "tp": 198625,
+        "fp": 2076143,
+        "fn": 6467,
+        "tn": 183641,
+        "precision": 0.08731659668150774,
+        "recall": 0.9684678095683888,
+        "f1": 0.16019049462469656,
+        "flagged_fraction": 0.9228731993008978
+      },
+      {
+        "tau": 0.95,
+        "tp": 181983,
+        "fp": 1679267,
+        "fn": 23109,
+        "tn": 580517,
+        "precision": 0.09777461383478844,
+        "recall": 0.8873237376396934,
+        "f1": 0.17614025171051065,
+        "flagged_fraction": 0.7551089791129453
+      }
+    ]
+  },
+  "stale_check": {
+    "pieces": 62,
+    "ai_predates_r2": 0,
+    "ai_predates_r3": 0,
+    "details": []
+  }
+}

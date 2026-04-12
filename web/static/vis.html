@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; worker-src 'self' blob:; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' data: https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' http://localhost:* ws://localhost:* wss://localhost:* https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
+    <title>FürElise Dataset Visualizer</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/vis.css">
+</head>
+
+<body>
+<canvas id="threeCanvas"></canvas>
+<div class="info-box">
+    <p id="pieceInformation"></p>
+    <p id="loadingText">Loading...</p>
+</div>
+<!-- Music Player -->
+    <div id="visualizer">
+<div class="player">
+    <!-- Playback Controls Group -->
+    <div class="playback-controls">
+        <!-- Previous Frame Button -->
+        <button id="prevFrameBtn" title="이전 프레임 (Q)">
+            <i class="fas fa-step-backward"></i>
+        </button>
+
+    <!-- Play/Pause Button -->
+        <button id="playPauseBtn" title="재생/일시정지 (Space)">
+        <i id="playPauseIcon" class="fas fa-play"></i>
+    </button>
+
+        <!-- Next Frame Button -->
+        <button id="nextFrameBtn" title="다음 프레임 (E)">
+            <i class="fas fa-step-forward"></i>
+        </button>
+    </div>
+
+    <!-- Time & Frame Display (통합) -->
+    <div class="time-frame-container">
+        <span class="time" id="timeDisplay">0:00</span>
+        <span class="time-separator">/</span>
+        <span class="time" id="totalDuration">0:00</span>
+        <span class="frame-display" id="frameDisplay">(Frame 0)</span>
+    </div>
+
+    <!-- Progress Bar -->
+<div class="progress-bar-container">
+    <div id="bufferedBar" class="buffered-bar"></div>
+    <div id="playedBar" class="played-bar"></div>
+    <input type="range" id="scrubber" class="progress-bar" value="0" min="0" max="100" step="0.1">
+    </div>
+
+    <!-- Volume Control -->
+    <div class="volume-container">
+        <div class="volume-icon-container">
+            <i class="fas fa-volume-up volume-icon" id="volumeIcon"></i>
+        </div>
+        <input type="range" id="volumeControl" class="volume-bar" min="0" max="1" step="0.1" value="1">
+    </div>
+</div>
+        <audio id="audio"></audio>
+    </div>
+
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.153.0/examples/jsm/"
+          }
+        }
+    </script>
+<script type="module" src="js/vis.js"></script>
+</body>
+
+</html>

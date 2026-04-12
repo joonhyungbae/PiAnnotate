@@ -1,0 +1,473 @@
+/* FingeringCompare.css - Piano Roll Fingering Comparison View */
+
+.fingering-compare {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 50%, #16213e 100%);
+  color: #e8e8e8;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Loading & Error States */
+.fingering-compare.loading,
+.fingering-compare.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 100vh;
+}
+
+/* Circle Spinner - PieceList와 동일한 스타일 */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #64ffda;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-size: 1rem;
+  color: rgba(136, 146, 176, 0.8);
+}
+
+/* Error State */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: rgba(239, 83, 80, 0.1);
+  border: 1px solid rgba(239, 83, 80, 0.3);
+  border-radius: 12px;
+  max-width: 400px;
+}
+
+.error-icon {
+  font-size: 3rem;
+}
+
+.error-message {
+  color: #ef5350;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.error-btn {
+  background: rgba(239, 83, 80, 0.2);
+  border: 1px solid rgba(239, 83, 80, 0.4);
+  color: #ef5350;
+  padding: 0.6rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.error-btn:hover {
+  background: rgba(239, 83, 80, 0.3);
+}
+
+/* Header */
+.fc-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e8e8e8;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.piece-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.piece-id {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.piece-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff;
+  max-width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.piece-composer {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.stats-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(156, 39, 176, 0.2);
+  border: 1px solid rgba(156, 39, 176, 0.4);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.stats-badge .changed {
+  color: #ba68c8;
+  font-weight: 600;
+}
+
+.stats-badge .separator {
+  color: #666;
+}
+
+.stats-badge .total {
+  color: #888;
+}
+
+.stats-badge .rate {
+  color: #ba68c8;
+  font-size: 0.8rem;
+}
+
+/* Legend Bar */
+.legend-bar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+.legend-item.unchanged .legend-dot {
+  background: #4CAF50;
+}
+
+.legend-item.changed .legend-dot {
+  background: #F44336;
+}
+
+.legend-item.missing .legend-dot {
+  background: #FFCC00;
+}
+
+.legend-item.removed .legend-dot {
+  background: transparent;
+  border: 2px solid #666;
+}
+
+/* Piano Roll Container */
+.piano-roll-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+  min-height: 0; /* Important for flex child to shrink */
+}
+
+/* Piano Roll Wrapper */
+.piano-roll-wrapper {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.piano-roll-wrapper canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hover-tooltip {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #fff;
+  pointer-events: none;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.hover-tooltip .tooltip-frame {
+  color: #888;
+  font-size: 0.7rem;
+}
+
+.hover-tooltip .tooltip-note {
+  font-weight: 600;
+  color: #fff;
+}
+
+.hover-tooltip .tooltip-status {
+  font-size: 0.75rem;
+}
+
+.hover-tooltip.unchanged .tooltip-status {
+  color: #4CAF50;
+}
+
+.hover-tooltip.changed .tooltip-status {
+  color: #F44336;
+}
+
+.hover-tooltip.added .tooltip-status {
+  color: #FF9800;
+}
+
+.hover-tooltip.removed .tooltip-status {
+  color: #666;
+}
+
+.hover-tooltip.missing .tooltip-status {
+  color: #FFCC00;
+}
+
+/* Controls */
+.fc-controls {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.playback-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.control-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e8e8e8;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+
+.control-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.control-btn.play-btn {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  min-width: 100px;
+}
+
+.control-btn.play-btn:hover {
+  filter: brightness(1.1);
+}
+
+/* Timeline */
+.timeline {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.timeline .time {
+  font-size: 0.85rem;
+  color: #888;
+  min-width: 50px;
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline .time.current {
+  color: #fff;
+}
+
+/* Timeline Container with Change Markers */
+.timeline-container {
+  flex: 1;
+  position: relative;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.change-markers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  pointer-events: none;
+}
+
+.change-marker {
+  position: absolute;
+  top: 0;
+  width: 3px;
+  height: 8px;
+  background: #F44336;
+  border-radius: 1px;
+  transform: translateX(-50%);
+  pointer-events: auto;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s, height 0.2s;
+}
+
+.change-marker:hover {
+  opacity: 1;
+  height: 12px;
+}
+
+.timeline-slider {
+  flex: 1;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 8px; /* Space for markers above */
+}
+
+.timeline-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Zoom Controls */
+.zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.zoom-label {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.zoom-value {
+  font-size: 0.85rem;
+  min-width: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Finger Legend (optional, can be added) */
+.finger-legend {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.finger-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+}
+
+.finger-color-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fc-header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .piece-info {
+    order: 1;
+    width: 100%;
+  }
+
+  .fc-controls {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .timeline {
+    order: 1;
+    width: 100%;
+  }
+}
+

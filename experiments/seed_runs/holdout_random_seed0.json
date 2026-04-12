@@ -1,0 +1,164 @@
+{
+  "split": "file:PiAnnotate_paper/splits/random_holdout.json",
+  "pieces_evaluated": 62,
+  "summary": {
+    "n_notes": 1962875,
+    "rule_agreement": 0.9127687702986691,
+    "ai_agreement": 0.947921288925683,
+    "absolute_delta": 0.03515251862701385,
+    "r2_reversal_decomposition": {
+      "on_rule_wrong_notes": {
+        "total": 171224,
+        "fixed": 71485,
+        "kept_wrong": 79595,
+        "other_wrong": 12131,
+        "no_ai": 8013,
+        "fix_rate": 0.41749404289118347
+      },
+      "on_rule_right_notes": {
+        "total": 1791651,
+        "kept_right": 1789166,
+        "broken": 1869,
+        "no_ai": 616,
+        "break_rate": 0.001043171912386955
+      }
+    },
+    "triage": {
+      "flagged_notes": 91989,
+      "unflagged_notes": 1862257,
+      "review_load_reduction": 0.9529286486962235,
+      "flagged_precision": 0.9090978269140876,
+      "rule_error_recall": 0.5123858073291628,
+      "missed_errors": 79584,
+      "caught_errors": 83627
+    },
+    "missing_fill_vs_overwrite": {
+      "rule_had_entry": {
+        "notes": 1871755,
+        "ai_accuracy": 0.9561149829972405
+      },
+      "rule_no_entry_filled_by_model": {
+        "notes": 91120,
+        "ai_accuracy": 0.7796093064091308
+      }
+    },
+    "threshold_sweep": [
+      {
+        "tau": 0.1,
+        "tp": 163211,
+        "fp": 1791035,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.08351609776865349,
+        "recall": 1.0,
+        "f1": 0.15415755786304042,
+        "flagged_fraction": 1.0
+      },
+      {
+        "tau": 0.2,
+        "tp": 163211,
+        "fp": 1790462,
+        "fn": 0,
+        "tn": 573,
+        "precision": 0.08354059251471459,
+        "recall": 1.0,
+        "f1": 0.1541992853647153,
+        "flagged_fraction": 0.9997067922871532
+      },
+      {
+        "tau": 0.3,
+        "tp": 163151,
+        "fp": 1780749,
+        "fn": 60,
+        "tn": 10286,
+        "precision": 0.08392972889551932,
+        "recall": 0.999632377719639,
+        "f1": 0.1548575276765201,
+        "flagged_fraction": 0.9947058865669931
+      },
+      {
+        "tau": 0.4,
+        "tp": 162834,
+        "fp": 1752020,
+        "fn": 377,
+        "tn": 39015,
+        "precision": 0.0850372926604326,
+        "recall": 0.9976901066717316,
+        "f1": 0.15671694581257084,
+        "flagged_fraction": 0.9798428652278167
+      },
+      {
+        "tau": 0.5,
+        "tp": 161105,
+        "fp": 1689144,
+        "fn": 2106,
+        "tn": 101891,
+        "precision": 0.08707206435458147,
+        "recall": 0.9870964579593288,
+        "f1": 0.16002801148272128,
+        "flagged_fraction": 0.9467840793840694
+      },
+      {
+        "tau": 0.6,
+        "tp": 158167,
+        "fp": 1571240,
+        "fn": 5044,
+        "tn": 219795,
+        "precision": 0.09145736081789885,
+        "recall": 0.9690952202976515,
+        "f1": 0.1671409655831235,
+        "flagged_fraction": 0.884948466058009
+      },
+      {
+        "tau": 0.7,
+        "tp": 153324,
+        "fp": 1374685,
+        "fn": 9887,
+        "tn": 416350,
+        "precision": 0.10034234091553125,
+        "recall": 0.9394219752345124,
+        "f1": 0.18131762869407883,
+        "flagged_fraction": 0.7818918396148694
+      },
+      {
+        "tau": 0.8,
+        "tp": 142569,
+        "fp": 1057360,
+        "fn": 20642,
+        "tn": 733675,
+        "precision": 0.11881452985968337,
+        "recall": 0.8735256814798023,
+        "f1": 0.2091773405519609,
+        "flagged_fraction": 0.6140112350236357
+      },
+      {
+        "tau": 0.9,
+        "tp": 124206,
+        "fp": 600296,
+        "fn": 39005,
+        "tn": 1190739,
+        "precision": 0.17143637974774398,
+        "recall": 0.7610148825753166,
+        "f1": 0.2798336849860259,
+        "flagged_fraction": 0.3707322414885332
+      },
+      {
+        "tau": 0.95,
+        "tp": 106791,
+        "fp": 296021,
+        "fn": 56420,
+        "tn": 1495014,
+        "precision": 0.26511375033514395,
+        "recall": 0.6543125157005348,
+        "f1": 0.37733802336654165,
+        "flagged_fraction": 0.2061214401871617
+      }
+    ]
+  },
+  "stale_check": {
+    "pieces": 62,
+    "ai_predates_r2": 0,
+    "ai_predates_r3": 0,
+    "details": []
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "split": "r2",
+  "pieces_evaluated": 62,
+  "summary": {
+    "n_notes": 2513363,
+    "rule_agreement": 0.9139189205856854,
+    "ai_agreement": 0.9371069757929913,
+    "absolute_delta": 0.023188055207305935,
+    "r2_reversal_decomposition": {
+      "on_rule_wrong_notes": {
+        "total": 216353,
+        "fixed": 72417,
+        "kept_wrong": 120257,
+        "other_wrong": 14096,
+        "no_ai": 9583,
+        "fix_rate": 0.3347168747371194
+      },
+      "on_rule_right_notes": {
+        "total": 2297010,
+        "kept_right": 2282873,
+        "broken": 6444,
+        "no_ai": 7693,
+        "break_rate": 0.0028053861324069114
+      }
+    },
+    "triage": {
+      "flagged_notes": 100711,
+      "unflagged_notes": 2395376,
+      "review_load_reduction": 0.9596524480116277,
+      "flagged_precision": 0.8599358560633893,
+      "rule_error_recall": 0.4188470280988538,
+      "missed_errors": 120165,
+      "caught_errors": 86605
+    },
+    "missing_fill_vs_overwrite": {
+      "rule_had_entry": {
+        "notes": 2418067,
+        "ai_accuracy": 0.9443894648080471
+      },
+      "rule_no_entry_filled_by_model": {
+        "notes": 95296,
+        "ai_accuracy": 0.7523190899932841
+      }
+    },
+    "threshold_sweep": [
+      {
+        "tau": 0.1,
+        "tp": 206770,
+        "fp": 2289317,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.08283765750152138,
+        "recall": 1.0,
+        "f1": 0.1530010651691895,
+        "flagged_fraction": 1.0
+      },
+      {
+        "tau": 0.2,
+        "tp": 206770,
+        "fp": 2289314,
+        "fn": 0,
+        "tn": 3,
+        "precision": 0.08283775706266296,
+        "recall": 1.0,
+        "f1": 0.1530012349908652,
+        "flagged_fraction": 0.9999987981188155
+      },
+      {
+        "tau": 0.3,
+        "tp": 206770,
+        "fp": 2289120,
+        "fn": 0,
+        "tn": 197,
+        "precision": 0.08284419585799054,
+        "recall": 1.0,
+        "f1": 0.15301221759303796,
+        "flagged_fraction": 0.9999210764688891
+      },
+      {
+        "tau": 0.4,
+        "tp": 206770,
+        "fp": 2287214,
+        "fn": 0,
+        "tn": 2103,
+        "precision": 0.08290750862876425,
+        "recall": 1.0,
+        "f1": 0.15312020272857135,
+        "flagged_fraction": 0.9991574812897147
+      },
+      {
+        "tau": 0.5,
+        "tp": 206763,
+        "fp": 2279755,
+        "fn": 7,
+        "tn": 9562,
+        "precision": 0.0831536309007214,
+        "recall": 0.9999661459592785,
+        "f1": 0.1535394655157562,
+        "flagged_fraction": 0.9961663996487302
+      },
+      {
+        "tau": 0.6,
+        "tp": 206651,
+        "fp": 2262122,
+        "fn": 119,
+        "tn": 27195,
+        "precision": 0.08370595433440013,
+        "recall": 0.9994244813077332,
+        "f1": 0.1544740637694853,
+        "flagged_fraction": 0.9890572724428275
+      },
+      {
+        "tau": 0.7,
+        "tp": 206502,
+        "fp": 2212784,
+        "fn": 268,
+        "tn": 76533,
+        "precision": 0.0853565886794699,
+        "recall": 0.9987038738695169,
+        "f1": 0.15727158902932764,
+        "flagged_fraction": 0.9692314410515339
+      },
+      {
+        "tau": 0.8,
+        "tp": 204907,
+        "fp": 2083474,
+        "fn": 1863,
+        "tn": 205843,
+        "precision": 0.0895423445658743,
+        "recall": 0.9909899888765294,
+        "f1": 0.16424416798822997,
+        "flagged_fraction": 0.9167873555689365
+      },
+      {
+        "tau": 0.9,
+        "tp": 198928,
+        "fp": 1714555,
+        "fn": 7842,
+        "tn": 574762,
+        "precision": 0.10396120582205329,
+        "recall": 0.962073801808773,
+        "f1": 0.1876455309814442,
+        "flagged_fraction": 0.7665930714754734
+      },
+      {
+        "tau": 0.95,
+        "tp": 180829,
+        "fp": 1242297,
+        "fn": 25941,
+        "tn": 1047020,
+        "precision": 0.12706464501386386,
+        "recall": 0.8745417613773758,
+        "f1": 0.22189023103314567,
+        "flagged_fraction": 0.5701427874909809
+      }
+    ]
+  },
+  "stale_check": {
+    "pieces": 62,
+    "ai_predates_r2": 0,
+    "ai_predates_r3": 0,
+    "details": []
+  }
+}

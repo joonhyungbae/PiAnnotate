@@ -1,0 +1,90 @@
+# =====================================================
+# PiAnnotate .gitignore
+# =====================================================
+# Tracked: source code, paper, tool front/back-end,
+#          rule-based fingerings, human-edited fingerings,
+#          status JSONs, analysis scripts, result JSONs.
+# Ignored: trained checkpoints, AI inference outputs,
+#          FürElise raw data, build artifacts.
+# =====================================================
+
+# ----- Logs -----
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ----- Node / web build -----
+node_modules
+dist
+dist-ssr
+*.local
+
+# ----- Editor / OS -----
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ----- Python -----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+*.so
+
+# ----- MANO model (download separately) -----
+mano_v1_2/
+
+# ----- FürElise raw dataset (not redistributed) -----
+for_elise/*
+!for_elise/split.json
+!for_elise/dataset/
+for_elise/dataset/*
+!for_elise/dataset/*/
+for_elise/dataset/*/*
+!for_elise/dataset/*/vis/
+for_elise/dataset/*/vis/*
+!for_elise/dataset/*/vis/fingering.pkl
+!for_elise/dataset/*/vis/fingering_edited.pkl
+
+# ----- Misc binaries / archives -----
+*.hdr
+!web/static/resources/*.hdr
+*.part
+*.zip
+*.tar
+*.tar.gz
+*.tar.xz
+for_elise_data.tar.xz
+
+# =====================================================
+# Data directory (created at runtime, not tracked)
+# =====================================================
+data/
+*.pkl
+!web/static/resources/*.pkl
+
+# =====================================================
+# Trained model checkpoints (regenerable)
+# =====================================================
+model/checkpoints/
+model/checkpoints_*/
+
+# =====================================================
+# Paper directory and helper (separate repo)
+# =====================================================
+PiAnnotate_paper/
+paper.sh

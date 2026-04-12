@@ -1,0 +1,2 @@
+export { HandMesh } from './HandMesh';
+

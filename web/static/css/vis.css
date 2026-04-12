@@ -1,0 +1,251 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Fullscreen canvas for the Three.js scene */
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+.lil-gui {
+    font-size: 16px; /* Set this to your desired font size */
+}
+
+.info-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /* Light semi-transparent background */
+    color: white; /* White text for contrast */
+    padding: 15px;
+    /*border-radius: 15px; !* Rounded corners *!*/
+    width: 220px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3); /* Optional light shadow */
+}
+
+.player {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 10px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    width: 700px;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+/* Playback Controls Group */
+.playback-controls {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.player button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.player button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.player button i {
+    color: white;
+}
+
+.player button:hover i,
+.player button:focus i,
+.player button:active i {
+    color: white;
+}
+
+/* Time & Frame Display Container */
+.time-frame-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+.time-separator {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+}
+
+.frame-display {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    margin-left: 6px;
+    font-family: 'Courier New', monospace;
+}
+
+
+/* Progress Bar Container */
+.progress-bar-container {
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    overflow: visible;
+    display: flex;
+    z-index: 10;
+}
+
+/* Scrubber (input range) */
+.progress-bar {
+    appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background-color: transparent;
+    z-index: 3;
+    cursor: pointer;
+    margin: 0;
+}
+
+/* WebKit Thumb */
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background-color: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.5);
+    z-index: 4;
+    position: relative;
+    transition: transform 0.1s;
+}
+
+.progress-bar::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+/* Mozilla Thumb */
+.progress-bar::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 6px rgba(52, 152, 219, 0.5);
+    z-index: 4;
+    position: relative;
+}
+
+/* Buffered Bar */
+.buffered-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 1;
+    border-radius: 3px;
+    pointer-events: none;
+}
+
+/* Played Bar */
+.played-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #3498db;
+    z-index: 2;
+    border-radius: 3px;
+    pointer-events: none;
+}
+
+.time {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.volume-container {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.volume-icon-container {
+    color: white;
+    width: 20px;
+    text-align: center;
+}
+
+.volume-bar {
+    appearance: none;
+    width: 80px;
+    height: 5px;
+    background-color: #555;
+    border-radius: 5px;
+    outline: none;
+}
+
+.volume-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-bar::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.volume-icon {
+    color: white;
+    font-size: 16px;
+}
+
+/* Ensure volume icon stays white during interaction */
+.volume-icon:hover,
+.volume-icon:focus,
+.volume-icon:active,
+.volume-icon-container:hover i,
+.volume-icon-container:focus i,
+.volume-icon-container:active i {
+    color: white;
+}
+

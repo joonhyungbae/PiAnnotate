@@ -1,0 +1,164 @@
+{
+  "split": "r2",
+  "pieces_evaluated": 62,
+  "summary": {
+    "n_notes": 2513363,
+    "rule_agreement": 0.9139189205856854,
+    "ai_agreement": 0.9426915252591846,
+    "absolute_delta": 0.02877260467349929,
+    "r2_reversal_decomposition": {
+      "on_rule_wrong_notes": {
+        "total": 216353,
+        "fixed": 73465,
+        "kept_wrong": 120862,
+        "other_wrong": 11889,
+        "no_ai": 10137,
+        "fix_rate": 0.3395608103423572
+      },
+      "on_rule_right_notes": {
+        "total": 2297010,
+        "kept_right": 2295861,
+        "broken": 889,
+        "no_ai": 260,
+        "break_rate": 0.0003870248714633371
+      }
+    },
+    "triage": {
+      "flagged_notes": 94240,
+      "unflagged_notes": 2408726,
+      "review_load_reduction": 0.9623486695384595,
+      "flagged_precision": 0.9080008488964346,
+      "rule_error_recall": 0.414953252899872,
+      "missed_errors": 120646,
+      "caught_errors": 85570
+    },
+    "missing_fill_vs_overwrite": {
+      "rule_had_entry": {
+        "notes": 2418067,
+        "ai_accuracy": 0.9495361377496984
+      },
+      "rule_no_entry_filled_by_model": {
+        "notes": 95296,
+        "ai_accuracy": 0.7690144392209537
+      }
+    },
+    "threshold_sweep": [
+      {
+        "tau": 0.1,
+        "tp": 206216,
+        "fp": 2296750,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.08238865410077484,
+        "recall": 1.0,
+        "f1": 0.15223488122983247,
+        "flagged_fraction": 1.0
+      },
+      {
+        "tau": 0.2,
+        "tp": 206216,
+        "fp": 2296750,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.08238865410077484,
+        "recall": 1.0,
+        "f1": 0.15223488122983247,
+        "flagged_fraction": 1.0
+      },
+      {
+        "tau": 0.3,
+        "tp": 206216,
+        "fp": 2296750,
+        "fn": 0,
+        "tn": 0,
+        "precision": 0.08238865410077484,
+        "recall": 1.0,
+        "f1": 0.15223488122983247,
+        "flagged_fraction": 1.0
+      },
+      {
+        "tau": 0.4,
+        "tp": 206216,
+        "fp": 2296610,
+        "fn": 0,
+        "tn": 140,
+        "precision": 0.08239326265589378,
+        "recall": 1.0,
+        "f1": 0.15224274854358108,
+        "flagged_fraction": 0.9999440663596709
+      },
+      {
+        "tau": 0.5,
+        "tp": 206202,
+        "fp": 2294660,
+        "fn": 14,
+        "tn": 2090,
+        "precision": 0.08245237042267826,
+        "recall": 0.9999321100205609,
+        "f1": 0.15234285824050878,
+        "flagged_fraction": 0.9991593972910539
+      },
+      {
+        "tau": 0.6,
+        "tp": 205771,
+        "fp": 2270539,
+        "fn": 445,
+        "tn": 26211,
+        "precision": 0.08309581595196078,
+        "recall": 0.9978420685106878,
+        "f1": 0.15341584760035876,
+        "flagged_fraction": 0.9893502348813368
+      },
+      {
+        "tau": 0.7,
+        "tp": 203604,
+        "fp": 2120182,
+        "fn": 2612,
+        "tn": 176568,
+        "precision": 0.08761736235608615,
+        "recall": 0.9873336695503744,
+        "f1": 0.16095165142161943,
+        "flagged_fraction": 0.9284129308987817
+      },
+      {
+        "tau": 0.8,
+        "tp": 193328,
+        "fp": 1756023,
+        "fn": 12888,
+        "tn": 540727,
+        "precision": 0.09917557176721893,
+        "recall": 0.9375024246421229,
+        "f1": 0.17937554249067647,
+        "flagged_fraction": 0.7788164122085558
+      },
+      {
+        "tau": 0.9,
+        "tp": 166043,
+        "fp": 941877,
+        "fn": 40173,
+        "tn": 1354873,
+        "precision": 0.14986912412448553,
+        "recall": 0.8051897039996897,
+        "f1": 0.25270291659310756,
+        "flagged_fraction": 0.4426428485245105
+      },
+      {
+        "tau": 0.95,
+        "tp": 130437,
+        "fp": 349843,
+        "fn": 75779,
+        "tn": 1946907,
+        "precision": 0.27158532522695095,
+        "recall": 0.6325260891492416,
+        "f1": 0.38000804083344986,
+        "flagged_fraction": 0.1918843484090475
+      }
+    ]
+  },
+  "stale_check": {
+    "pieces": 62,
+    "ai_predates_r2": 0,
+    "ai_predates_r3": 0,
+    "details": []
+  }
+}
