@@ -197,10 +197,15 @@ If you use PiAnnotate in your research, please cite:
 
 ```bibtex
 @inproceedings{piannotate2026,
-  title     = {PiAnnotate: A Web Annotation Tool and {ML}-Ready Corpus
-               for Piano Fingering, with a Diagnostic Probe},
-  author    = {Anonymous},
-  booktitle = {Proc. of the 1st Korean Society for Music Informatics Conf.},
+  title     = {{PiAnnotate}: A Web Annotation Tool for Piano Fingering,
+               with a Diagnostic Probe},
+  author    = {Bae, Joonhyung and Kim, Kirak and Cho, Hyeyoon
+               and Lee, Sein and Choi, Yoon-Seok and Hur, Hyeon
+               and Lee, Gyubin and Maezawa, Akira and Park, Jonghwa
+               and Park, Jaebum and Nam, Juhan},
+  booktitle = {Proceedings of the First Korean Society for Music Informatics Conference},
+  address   = {Seoul, Republic of Korea},
+  month     = may,
   year      = {2026}
 }
 ```
